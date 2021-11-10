@@ -1,12 +1,15 @@
-class Quiz {
-  constructor(name, questions) {
-    this.name = name;
-    this.questions = questions;
-    this.current = 0;
-    this.score = 0;
-  }
+export interface IQuestion {
+  question: string;
+  verify(guess: string): boolean;
+}
 
-  get currentQuestion() {
+export class Quiz {
+  public score = 0;
+  private current = 0;
+
+  constructor(public name: string, private questions: IQuestion[]) {}
+
+  public get currentQuestion(): string {
     if (this.finished) {
       throw new Error('The quiz is finished!');
     }
@@ -14,7 +17,7 @@ class Quiz {
     return this.questions[this.current].question;
   }
 
-  answerQuestion(guess) {
+  public answerQuestion(guess: string): string {
     if (this.finished) {
       throw new Error('The quiz is finished!');
     }
@@ -30,9 +33,7 @@ class Quiz {
     return correct ? 'CORRECT!' : 'INCORRECT!';
   }
 
-  get finished() {
+  public get finished(): boolean {
     return this.current >= this.questions.length;
   }
 }
-
-module.exports = Quiz;

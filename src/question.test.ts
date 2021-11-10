@@ -1,6 +1,6 @@
-const Question = require('./question');
+import { Question } from './question';
 
-let subject;
+let subject: Question;
 
 const q = 'What is the capital of France?';
 const a = 'Paris';

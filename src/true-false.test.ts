@@ -1,6 +1,6 @@
-const TrueFalse = require('./true-false');
+import { TrueFalse } from './true-false';
 
-let subject;
+let subject: TrueFalse;
 
 const q = '2 + 2 === 5';
 const a = false;

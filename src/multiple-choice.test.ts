@@ -1,6 +1,6 @@
-const MultipleChoice = require('./multiple-choice');
+import { MultipleChoice } from './multiple-choice';
 
-let subject;
+let subject: MultipleChoice;
 
 const q = 'What is the answer?';
 const o = {

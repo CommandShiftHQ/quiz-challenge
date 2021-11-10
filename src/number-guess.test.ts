@@ -1,6 +1,6 @@
-const NumberGuess = require('./number-guess');
+import { NumberGuess } from './number-guess';
 
-let subject;
+let subject: NumberGuess;
 
 const q = 'What is the answer?';
 const a = 42;

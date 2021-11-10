@@ -1,9 +1,9 @@
-const prompt = require('prompt-sync')();
-const { Quiz } = require('./dist/quiz');
-const { Question } = require('./dist/question');
-const { MultipleChoice } = require('./dist/multiple-choice');
-const { TrueFalse } = require('./dist/true-false');
-const { NumberGuess } = require('./dist/number-guess');
+import prompt from 'prompt-sync';
+import { Quiz } from './src/quiz';
+import { Question } from './src/question';
+import { MultipleChoice } from './src/multiple-choice';
+import { TrueFalse } from './src/true-false';
+import { NumberGuess } from './src/number-guess';
 
 const questions = [
   new Question('What is the capital of France?', 'Paris'),
@@ -23,10 +23,12 @@ const questions = [
 
 const quiz = new Quiz('Geography Quiz', questions);
 
+const p = prompt();
+
 console.log(`Welcome to the ${quiz.name}`);
 
 while (!quiz.finished) {
-  console.log(quiz.answerQuestion(prompt(`${quiz.currentQuestion}: `)));
+  console.log(quiz.answerQuestion(p(`${quiz.currentQuestion}: `)));
 }
 
 console.log(`Final Score: ${quiz.score}`);
