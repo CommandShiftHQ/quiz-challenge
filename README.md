@@ -39,19 +39,19 @@ I want to provide a quiz with a name/identifier
 ```txt
 As a player
 So I know what question to answer
-I want to be able to read the current question
+I want to be able to read a question
 ```
 
 ```txt
 As a player
 So I can play the game
-I want to be able to provide an answer to the current question
+I want to be able to provide an answer to a question
 ```
 
 ```txt
 As a player
 So I can progress through a game
-I want to move onto the next question after I provide an answer to a question
+I want the quiz to keep track of my current question and to move onto the next question after I provide an answer
 ```
 
 ```txt
