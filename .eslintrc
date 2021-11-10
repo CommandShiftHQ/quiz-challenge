@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "eslint-recommended",
+    "prettier"
+  ],
+  "env": {
+    "commonjs": true,
+    "jest": true
+  }
+}
