@@ -3,6 +3,10 @@ class Question {
     this.question = question;
     this.answer = answer;
   }
+
+  verify(guess) {
+    return guess === this.answer;
+  }
 }
 
 module.exports = Question;
